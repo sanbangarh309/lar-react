@@ -6296,6 +6296,25 @@ exports.push([module.i, "*, *:before, *:after {\n    -o-box-sizing:      border-
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/cssarea.css":
+/*!*****************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/components/cssarea.css ***!
+  \*****************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".fancy {\n  position: relative;\n  background-color: #FFC;\n  padding: 2rem;\n  text-align: center;\n  max-width: 300px;\n}\n\n.fancy::before {\n  content: \"\";\n\n  position : absolute;\n  z-index  : -1;\n  bottom   : 15px;\n  right    : 5px;\n  width    : 50%;\n  top      : 80%;\n  max-width: 200px;\n\n  box-shadow: 0px 13px 10px black;\n  transform: rotate(4deg);\n}\n\ntable tr th {\n  padding: 5px;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/lib/css-base.js":
 /*!*************************************************!*\
   !*** ./node_modules/css-loader/lib/css-base.js ***!
@@ -78079,6 +78098,78 @@ if (token) {
 
 /***/ }),
 
+/***/ "./resources/js/components/CssArea.js":
+/*!********************************************!*\
+  !*** ./resources/js/components/CssArea.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _cssarea_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./cssarea.css */ "./resources/js/components/cssarea.css");
+/* harmony import */ var _cssarea_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_cssarea_css__WEBPACK_IMPORTED_MODULE_1__);
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+var CssArea =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(CssArea, _React$Component);
+
+  function CssArea(props) {
+    var _this;
+
+    _classCallCheck(this, CssArea);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(CssArea).call(this, props));
+    _this.state = {};
+    return _this;
+  }
+
+  _createClass(CssArea, [{
+    key: "render",
+    value: function render() {
+      console.log(this.props.contentCss);
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "cssArea",
+        className: "css-area fancy"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table", {
+        style: {
+          width: "100%"
+        }
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Width"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Height"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Top"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th", null, "Left")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, this.props.contentCss ? this.props.contentCss.w : '190'), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, this.props.contentCss ? this.props.contentCss.h : '200'), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, this.props.contentCss ? this.props.contentCss.t : ''), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, this.props.contentCss ? this.props.contentCss.l : ''))));
+    }
+  }]);
+
+  return CssArea;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+;
+/* harmony default export */ __webpack_exports__["default"] = (CssArea);
+
+/***/ }),
+
 /***/ "./resources/js/components/DropArea.js":
 /*!*********************************************!*\
   !*** ./resources/js/components/DropArea.js ***!
@@ -78181,6 +78272,12 @@ function (_React$Component) {
       list[index].isDragging = false;
       list[index].top = e.clientY - obj.y;
       list[index].left = e.clientX - obj.x;
+      this.props.contentCss({
+        t: list[index].top,
+        l: list[index].left,
+        w: list[index].width,
+        h: list[index].height
+      });
       var newState = Object.assign(this.state, {
         list: list
       });
@@ -78228,6 +78325,12 @@ function (_React$Component) {
       });
       list[index].width = clientX - position.left + 16 / 2;
       list[index].height = clientY - position.top + 16 / 2;
+      this.props.contentCss({
+        t: list[index].top,
+        l: list[index].left,
+        w: parseInt(list[index].width),
+        h: parseInt(list[index].height)
+      });
       var newState = Object.assign(this.state, {
         list: list
       });
@@ -78543,6 +78646,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* harmony import */ var _Tree__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Tree */ "./resources/js/components/Tree.js");
 /* harmony import */ var _DropArea__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./DropArea */ "./resources/js/components/DropArea.js");
+/* harmony import */ var _CssArea__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./CssArea */ "./resources/js/components/CssArea.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -78572,7 +78676,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  width: 800px;\n  max-width: 100%;\n  margin: 0 auto;\n  display: flex;  \n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 1000px;\n  max-width: 100%;\n  margin: 0 auto;\n  display: flex;  \n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -78582,6 +78686,7 @@ function _templateObject() {
 }
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
 
 
 
@@ -78603,7 +78708,8 @@ function (_Component) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(FileExplorer).call(this, props));
     _this.state = {
       selectedFile: null,
-      hoverOn: null
+      hoverOn: null,
+      contentCss: null
     };
     _this.onSelect = _this.onSelect.bind(_assertThisInitialized(_this));
     return _this;
@@ -78625,18 +78731,30 @@ function (_Component) {
       });
     }
   }, {
+    key: "contentCssMethod",
+    value: function contentCssMethod(properties) {
+      console.log('hovering on component');
+      this.setState({
+        contentCss: properties
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       var _this$state = this.state,
           selectedFile = _this$state.selectedFile,
-          hoverOn = _this$state.hoverOn;
+          hoverOn = _this$state.hoverOn,
+          contentCss = _this$state.contentCss;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledFileExplorer, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TreeWrapper, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Tree__WEBPACK_IMPORTED_MODULE_2__["default"], {
         onSelect: this.onSelect,
         onHover: this.onHover.bind(this)
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "myBox"
       }, selectedFile && selectedFile.type === 'file' && selectedFile.content), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_DropArea__WEBPACK_IMPORTED_MODULE_3__["default"], {
-        contentType: hoverOn
+        contentType: hoverOn,
+        contentCss: this.contentCssMethod.bind(this)
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_CssArea__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        contentCss: contentCss
       }));
     }
   }]);
@@ -78943,6 +79061,36 @@ TreeNode.defaultProps = {
   level: 0
 };
 /* harmony default export */ __webpack_exports__["default"] = (TreeNode);
+
+/***/ }),
+
+/***/ "./resources/js/components/cssarea.css":
+/*!*********************************************!*\
+  !*** ./resources/js/components/cssarea.css ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6-1!../../../node_modules/postcss-loader/src??ref--6-2!./cssarea.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/components/cssarea.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
 
 /***/ }),
 

@@ -27,7 +27,7 @@ class DropArea extends React.Component {
         list[index].isDragging = false;
         list[index].top  = (e.clientY - obj.y);
         list[index].left = (e.clientX - obj.x);
-        
+        this.props.contentCss({t:list[index].top,l:list[index].left,w:list[index].width,h:list[index].height});
         let newState = Object.assign(
           this.state, {
             list : list
@@ -67,7 +67,7 @@ class DropArea extends React.Component {
       let index = this.state.list.findIndex((item) => item.id == id);
       list[index].width =   clientX - position.left + (16 / 2);
       list[index].height =  clientY - position.top  + (16 / 2);
-      
+      this.props.contentCss({t:list[index].top,l:list[index].left,w: parseInt(list[index].width),h:parseInt(list[index].height)});
       let newState = Object.assign(
         this.state, {
           list : list
@@ -198,7 +198,6 @@ render() {
           id={ 'item_' + this.props.id }
           className="item unselectable"
           style={styles}
-          
           onMouseDown={this.onMouseDown.bind(this)}
           onMouseUp={this.onMouseUp.bind(this)}
           onDragStart={this.onDragStart.bind(this)}
@@ -226,7 +225,6 @@ render() {
           <Resizer
             ref={"resizerNode"}
             id={this.props.id}
-            
             isResizing={this.props.isResizing}
             resizerWidth={16}
             resizerHeight={16}

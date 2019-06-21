@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import Tree from './Tree';
 import DropArea from './DropArea';
+import CssArea from './CssArea';
 
 const StyledFileExplorer = styled.div`
-  width: 800px;
+  width: 1000px;
   max-width: 100%;
   margin: 0 auto;
   display: flex;  
@@ -20,6 +21,7 @@ export default class FileExplorer extends Component {
     this.state = {
       selectedFile: null,
       hoverOn: null,
+      contentCss: null,
     };
     this.onSelect = this.onSelect.bind(this);
   }
@@ -33,8 +35,13 @@ export default class FileExplorer extends Component {
     this.setState({ hoverOn: file.path }); 
   }
 
+  contentCssMethod(properties){
+    console.log('hovering on component');
+    this.setState({ contentCss: properties }); 
+  }
+
   render() {
-    const { selectedFile, hoverOn } = this.state;
+    const { selectedFile, hoverOn, contentCss } = this.state;
 
     return (
       <StyledFileExplorer>
@@ -46,6 +53,10 @@ export default class FileExplorer extends Component {
         </div>
         <DropArea
           contentType={hoverOn}
+          contentCss={this.contentCssMethod.bind(this)}
+        />
+        <CssArea
+          contentCss={contentCss}
         />
       </StyledFileExplorer>
     )
